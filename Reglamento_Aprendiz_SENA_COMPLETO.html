@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reglamento del Aprendiz | Blog Mecatronica SENA</title>
+<style>
+:root{--bg:#05070b;--panel:#111722;--panel2:#182231;--text:#f7f9fc;--muted:#b4bdca;--accent:#3b82f6;--blue:#93c5fd;--line:#293445;--shadow:0 18px 45px #0005}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at top right,#142b4b 0,transparent 38%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+.topbar{position:sticky;top:0;z-index:20;background:#05070bf0;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--blue));color:#061326;font-size:23px}
+.navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--accent)}
+.menu{display:none;background:transparent;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 12px}
+.hero{padding:65px 0 38px;display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+.hero h1{font-size:clamp(38px,6vw,60px);line-height:1.04;letter-spacing:-2px;margin:16px 0}
+.hero h1 span{color:var(--accent)}.hero p{color:var(--muted);font-size:17px;max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{border:0;border-radius:12px;padding:12px 18px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+.btn.primary{background:var(--accent);color:#061326}.btn.secondary{background:var(--panel2);border:1px solid var(--line);color:var(--text)}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.hero-card{position:relative;min-height:330px;border:1px solid #29466f;border-radius:26px;background:linear-gradient(145deg,#17263d,#0c1a2a);padding:25px;overflow:hidden;box-shadow:var(--shadow)}
+.hero-card:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#3b82f61c;right:-75px;top:-85px}
+.circuit{position:relative;display:grid;place-items:center;height:210px}
+.document-icon{font-size:100px;filter:drop-shadow(0 10px 18px #0005);position:relative;z-index:1}
+.orbit{position:absolute;border:1px dashed #5276a5;border-radius:50%;width:230px;height:150px;transform:rotate(-24deg)}
+.orbit:after{content:"";position:absolute;right:8px;top:18px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent)}
+.stats{display:flex;gap:10px;position:relative}.stat{flex:1;background:#050a13cc;border:1px solid var(--line);border-radius:12px;padding:10px}
+.stat strong{display:block;color:var(--accent);font-size:20px}.stat small{color:var(--muted)}
+section{padding:48px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}
+.section-head h2{font-size:clamp(26px,4vw,38px);margin:7px 0 0;line-height:1.15}
+.section-head p{color:var(--muted);max-width:520px;margin:0}
+.intro{background:#0c1a2a;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.intro-box{padding:25px;border-radius:18px;background:var(--panel);border:1px solid var(--line)}
+.intro-box h3{margin-top:0}.intro-box p{color:var(--muted);margin-bottom:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{font-size:12px;color:#c7ddff;background:#10294b;border:1px solid #28518a;padding:5px 9px;border-radius:99px}
+.tools{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:22px}
+.search{width:min(380px,100%);background:var(--panel);border:1px solid var(--line);color:var(--text);padding:11px 14px;border-radius:12px;outline:none}
+.search:focus{border-color:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:21px;display:flex;flex-direction:column;min-height:230px;transition:.22s}
+.card:hover{transform:translateY(-4px);border-color:#477fc4;box-shadow:var(--shadow)}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.card-icon{font-size:27px;width:52px;height:52px;border-radius:15px;background:#0b1525;display:grid;place-items:center}
+.card-num{color:#65819b;font-size:12px;font-weight:800;letter-spacing:1px}
+.card h3{margin:17px 0 8px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}
+.card-bottom{margin-top:auto;padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.learn{color:var(--accent);font-size:13px;font-weight:700;cursor:pointer;background:none;border:0;padding:0}
+.category{font-size:11px;color:#91a7bd;border:1px solid var(--line);border-radius:99px;padding:4px 8px}
+.details{display:none;margin-top:17px;padding-top:15px;border-top:1px solid var(--line);color:#dce6f5;font-size:14px}
+.card.open .details{display:block}.details ol{padding-left:21px;margin:0}.details li{padding:8px 0;border-bottom:1px solid #293445}
+.details li:last-child{border-bottom:0}
+.card.open .learn:after{content:" −"}.learn:after{content:" +"}
+.empty{grid-column:1/-1;text-align:center;padding:35px;color:var(--muted);border:1px dashed var(--line);border-radius:15px}
+.pdf-section{border:1px solid #2b4d78;background:linear-gradient(120deg,#101e33,#121e30);border-radius:22px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:32px}
+.pdf-section p{color:var(--muted);margin:5px 0 0}.pdf-section h3{margin:0 0 4px}
+.footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.hidden{display:none!important}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:48px}.hero-card{min-height:280px}.intro-grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.pdf-section{align-items:flex-start;flex-direction:column}}
+@media(max-width:560px){.navlinks{display:none;position:absolute;top:70px;left:4%;right:4%;padding:16px;background:#111c2d;border:1px solid var(--line);border-radius:14px;flex-direction:column;gap:12px}.navlinks.show{display:flex}.menu{display:block}.cards{grid-template-columns:1fr}.hero h1{letter-spacing:-1px}.stats{gap:6px}.stat{padding:8px}.stat strong{font-size:17px}.search{width:100%}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+<a class="brand" href="#inicio"><span class="logo">⚙</span><span>Blog Mecatronica <span style="color:var(--accent)">SENA</span></span></a>
+<nav class="navlinks" id="navlinks"><a href="#inicio">Inicio</a><a href="#contenido">Reglamento</a><a href="#documento">Documento oficial</a></nav>
+<button class="menu" id="menuBtn" aria-label="Abrir menú">☰</button>
+</div></header>
+
+<main>
+<section class="wrap hero" id="inicio">
+<div>
+<span class="eyebrow">📘 Formación · Convivencia · Compromiso</span>
+<h1>Reglamento del<br><span>Aprendiz SENA</span></h1>
+<p>Conoce los derechos, deberes y normas que orientan nuestra formación. Este espacio reúne los puntos compartidos por los aprendices y permite consultar el documento oficial completo.</p>
+<div class="actions"><a class="btn primary" href="#contenido">Explorar reglamento <span>→</span></a><a class="btn secondary" href="#documento">Ver documento oficial</a></div>
+</div>
+<div class="hero-card">
+<div class="circuit"><div class="orbit"></div><div class="document-icon">📋</div></div>
+<div class="stats"><div class="stat"><strong>04</strong><small>Secciones</small></div><div class="stat"><strong>SENA</strong><small>Formación</small></div><div class="stat"><strong>2024</strong><small>Acuerdo</small></div></div>
+</div>
+</section>
+
+<section class="intro">
+<div class="wrap">
+<div class="section-head"><div><span class="eyebrow">Nuestro compromiso</span><h2>Conocer para cumplir</h2></div><p>El reglamento orienta la convivencia y el desarrollo del proceso formativo dentro de la comunidad SENA.</p></div>
+<div class="intro-grid">
+<article class="intro-box"><h3>⚖️ Derechos y deberes</h3><p>Consulta los aspectos relacionados con las garantías del aprendiz y los compromisos que acompañan su formación.</p><div class="tags"><span class="tag">Respeto</span><span class="tag">Responsabilidad</span><span class="tag">Formación</span></div></article>
+<article class="intro-box"><h3>🛡️ Convivencia y normas</h3><p>Identifica las faltas leves y graves incluidas en el contenido compartido y revisa el documento oficial para ampliar la información.</p><div class="tags"><span class="tag">Convivencia</span><span class="tag">Compromiso</span><span class="tag">Comunidad SENA</span></div></article>
+</div>
+</div>
+</section>
+
+<section class="wrap" id="contenido">
+<div class="section-head"><div><span class="eyebrow">Explora y aprende</span><h2>Contenido del reglamento</h2></div><p>Selecciona una tarjeta para desplegar sus puntos. También puedes buscar palabras o temas específicos.</p></div>
+<div class="tools"><input class="search" id="search" type="search" placeholder="⌕ Buscar en el reglamento…" aria-label="Buscar contenido"></div>
+<div class="cards" id="cards">
+
+<article class="card" data-search="derechos aprendiz elementos protección personal asesoría centro formación evaluación ocho días hábiles certificación">
+<div class="card-top"><span class="card-icon">⚖️</span><span class="card-num">01 / 04</span></div>
+<h3>Derechos del aprendiz</h3><p>Conoce los derechos relacionados con la protección, asesoría, evaluación y certificación durante el proceso formativo.</p>
+<div class="card-bottom"><button class="learn" type="button">Leer contenido</button><span class="category">Derechos</span></div>
+<div class="details"><ol>
+<li>Recibir del centro de formación, elementos de protección personal requeridos para la ejecución de actividades del programa con la finalidad de proteger mi vida.</li>
+<li>Recibir asesoría del centro de formación para activar rutas que protejan mis derechos frente posibles vulneraciones inmorales de algún miembro de la comunidad según el protocolo.</li>
+<li>Ser evaluado integralmente con base a los criterios de evaluación para los resultados de formación y conocer los resultados de evaluación dentro de ocho días hábiles.</li>
+<li>Desarrollar las evaluaciones y demás actividades que hayan sido realizadas en nuestra ausencia con justificación a nuestros respectivos instructores.</li>
+<li>Obtener mi certificación del programa cuando apruebe los resultados de aprendizaje y cumpla con los demás requisitos institucionales.</li>
+</ol></div></article>
+
+<article class="card" data-search="deberes aprendiz reglamento normas asistencia puntualidad actividades evidencias inasistencias bienes recursos culturales físicos digitales">
+<div class="card-top"><span class="card-icon">📘</span><span class="card-num">02 / 04</span></div>
+<h3>Deberes del aprendiz</h3><p>Revisa los compromisos de asistencia, cumplimiento de actividades y cuidado de los recursos.</p>
+<div class="card-bottom"><button class="learn" type="button">Leer contenido</button><span class="category">Deberes</span></div>
+<div class="details"><ol>
+<li>Conocer y cumplir el reglamento del aprendiz y demás normas del SENA asociadas con su proceso formativo.</li>
+<li>Asistir con puntualidad a todas las actividades propias del proceso de formación.</li>
+<li>Cumplir con todas las actividades propias del proceso formativo, presentando las evidencias según la planeación pedagógica, guías de aprendizaje y cronograma, en los plazos o en las oportunidades que éstas deban presentarse o reportarse a través de los medios dispuestos para eso.</li>
+<li>Justificar debidamente las inasistencias o incumplimiento a las actividades de la formación en los términos establecidos en el presente reglamento.</li>
+<li>Respetar los bienes y recursos culturales, físicos, digitales de uso público o privado (en la entidad o fuera de ella) y velar por su conservación, apoyando o colaborando en las acciones que adelante el centro de formación para su protección conservación y buen uso.</li>
+</ol></div></article>
+
+<article class="card" data-search="faltas leves trabajos tiempo debido incumplimiento horas formación inducido cometer falta otra persona">
+<div class="card-top"><span class="card-icon">⚠️</span><span class="card-num">03 / 04</span></div>
+<h3>Faltas leves</h3><p>Consulta los comportamientos señalados como faltas leves en el contenido proporcionado.</p>
+<div class="card-bottom"><button class="learn" type="button">Leer contenido</button><span class="category">Convivencia</span></div>
+<div class="details"><ol>
+<li>No presentar trabajos en el tiempo debido.</li>
+<li>Incumplimiento en las horas de formación debida.</li>
+<li>Haber sido inducido a cometer la falta por otra persona.</li>
+</ol></div></article>
+
+<article class="card" data-search="faltas graves no reporta justifica incumplimientos instructor cinco días hábiles derechos humanos institución comunidad sena">
+<div class="card-top"><span class="card-icon">🚨</span><span class="card-num">04 / 04</span></div>
+<h3>Faltas graves</h3><p>Identifica las situaciones descritas como faltas graves en la información compartida.</p>
+<div class="card-bottom"><button class="learn" type="button">Leer contenido</button><span class="category">Convivencia</span></div>
+<div class="details"><ol>
+<li>Cuando el aprendiz no reporta ni justifica estos incumplimientos ante el instructor previamente y dentro de los 5 días hábiles.</li>
+<li>Cuando el aprendiz atenta directamente contra los derechos humanos.</li>
+<li>Se considera grave aquellos comportamientos que comprometen de manera significativa la institución o cualquier miembro de la comunidad SENA.</li>
+</ol></div></article>
+</div>
+</section>
+
+<section class="wrap" id="documento">
+<div class="pdf-section">
+<div><span class="eyebrow">Consulta y amplía</span><h3>📄 Reglamento oficial del SENA</h3><p>Acuerdo 009 de 2024 · Reglamento del Aprendiz SENA. Abre o descarga el documento oficial completo del Acuerdo 009 de 2024 desde el portal del SENA.</p></div>
+<a class="btn primary" href="https://www.sena.edu.co/es-co/transparencia/ProyectoNorma/Ultima%20esperanza3%20Acuerdo%20009%20de%202024%20-%20Reglamento%20del%20aprendiz%20%281%29-v3-comprimido.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir el reglamento oficial completo en PDF">📄 Abrir reglamento oficial en PDF ↗</a>
+</div>
+</section>
+</main>
+
+<footer class="footer"><div class="wrap footer-inner"><span>© <span id="year"></span> Blog Mecatronica SENA · Automatización de Sistemas Mecatrónicos</span><a href="#inicio">Volver arriba ↑</a></div></footer>
+
+<script>
+const cards=[...document.querySelectorAll('.card')];
+cards.forEach(card=>{
+  card.querySelector('.learn').addEventListener('click',()=>{
+    card.classList.toggle('open');
+    card.querySelector('.learn').textContent=card.classList.contains('open')?'Cerrar contenido':'Leer contenido';
+  });
+});
+document.getElementById('search').addEventListener('input',e=>{
+  const q=e.target.value.trim().toLocaleLowerCase('es');
+  cards.forEach(card=>{
+    const match=(card.innerText+' '+card.dataset.search).toLocaleLowerCase('es').includes(q);
+    card.classList.toggle('hidden',!match);
+    if(q && match) card.classList.add('open');
+    if(!q) card.classList.remove('open');
+  });
+});
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('show'));
+document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('show')));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
